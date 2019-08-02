@@ -2,7 +2,7 @@
 CREATE VIEW users_from_country AS 
     SELECT u.firstname, u.lastname,u.email,p.sex,p.address,p.phone, c.name as countryname 
 	FROM users u INNER JOIN profiles p ON u.id=p.user_id 
-    INNER JOIN countries c ON p.country_id=c.id ;
+    INNER JOIN countries c ON p.country_id=c.id ; 
   
 -- Использование   
 SELECT * FROM users_from_country WHERE countryname='USA';
